@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.kinini.bunnyworld.LoadSerializedActivity">
+
+    <EditText
+        android:id="@+id/serialized_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="100dp"
+        android:hint="Paste serialized game" />
+
+    <Button
+        android:id="@+id/create_serialized_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serialized_game"
+        android:onClick="onCreateSerializedGame"
+        android:text="Create Game" />
+
+</RelativeLayout>

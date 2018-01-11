@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.kinini.bunnyworld.GameActivity">
+
+    <ScrollView
+        android:id="@+id/sideBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/play_pause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickPlayPause"
+                    android:text="pause" />
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickNext"
+                    android:text="next" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/currentPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Page Name:" />
+
+                <EditText
+                    android:id="@+id/editPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="75dp"
+                    android:minWidth="75dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New PageName: " />
+
+                <EditText
+                    android:id="@+id/newPageName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="75dp"
+                    android:minWidth="75dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Page Name"
+                android:onClick="onChangePageName"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickUndo"
+                android:text="Undo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shape Properties: " />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shape Id:" />
+
+                <EditText
+                    android:id="@+id/shapeId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xpos: " />
+
+                <EditText
+                    android:id="@+id/xPos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="100dp"
+                    android:minWidth="50dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ypos: " />
+
+                <EditText
+                    android:id="@+id/yPos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="100dp"
+                    android:minWidth="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Width:" />
+
+                <EditText
+                    android:id="@+id/editWidth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:minWidth="50dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:" />
+
+                <EditText
+                    android:id="@+id/editHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:minWidth="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movable: " />
+
+                <Switch
+                    android:id="@+id/movable"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="100dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visible: " />
+
+                <Switch
+                    android:id="@+id/visible"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="100dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imageName"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="100dp"
+                android:text="No Image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text: " />
+
+                <EditText
+                    android:id="@+id/shapeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="100dp"
+                    android:minWidth="100dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rich Text: " />
+
+            <EditText
+                android:id="@+id/font_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Font Size"
+                android:inputType="numberDecimal"
+                android:maxWidth="100dp"
+                android:minWidth="50dp" />
+
+            <CheckBox
+                android:id="@+id/checkBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bold" />
+
+            <CheckBox
+                android:id="@+id/checkItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italic" />
+
+            <Button
+                android:id="@+id/update_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Update shape" />
+
+            <Button
+                android:id="@+id/clear_image_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:onClick="onClearImageName"
+                android:text="Clear image name" />
+
+            <Button
+                android:id="@+id/set_image_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:onClick="onSetImageName"
+                android:text="Set image name" />
+
+            <Button
+                android:id="@+id/edit_script"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:onClick="onEditScript"
+                android:text="Edit shape script" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.example.kinini.bunnyworld.PageView
+        android:id="@+id/canvasPg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

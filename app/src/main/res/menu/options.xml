@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/open_page"
+        android:title="Open page" />
+    <item
+        android:id="@+id/new_page"
+        android:title="New page" />
+    <item
+        android:id="@+id/delete_page"
+        android:title="Delete page" />
+    <item
+        android:id="@+id/view_shape"
+        android:title="View all shapes" />
+    <item
+        android:id="@+id/new_shape"
+        android:title="New shape" />
+    <item
+        android:id="@+id/save_game"
+        android:title="Save game" />
+    <item
+        android:id="@+id/copy_game"
+        android:title="Copy game" />
+    <item
+        android:id="@+id/copy_shape"
+        android:title="Copy shape" />
+    <item
+        android:id="@+id/paste_shape"
+        android:title="Paste shape" />
+    <item
+        android:id="@+id/delete_shape"
+        android:title="Delete shape" />
+</menu>
