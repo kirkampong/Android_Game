@@ -1,2 +1,2 @@
-# BunnyWorld_CS108
-Final CS_108  Group Project
+# BunnyWorld - Android Interactive Game Editor/ Game Generator
+Final CS_108  Group Project - create your own game!
